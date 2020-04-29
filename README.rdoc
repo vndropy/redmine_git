@@ -1,28 +1,25 @@
-== README
+Интеграция REDMINE и GIT
+Тестирование
+Создал новое удаленнще (на GITHUB) хранилище
+https://github.com/vndropy/redmine_git.git
+Создал проект ruby
+cd rails
+rails redmine_git
+cd redmine_git
+git config --global user.name "Dolgov"
+git config --global user.email vndropy@mail.ru
+git config --global push.default matching
+git config --global alias.co checkout
+git init
+git add -A
+git status
+git commit -m "Initialize repository"
+git log
+git remote add origin https://github.com/vndropy/redmine_git.git
+git push -u origin --all
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+git checkout -b modify-README
+git branch
+modify readmy and Gemfile
+git status
+git commit -a -m "Modify README.rdoc file"
